@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read and relax</title>
+    <style>
+      div {
+        border: 4px solid;
+        border-radius: 15px;
+        border-color: #f4acb7;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        background: linear-gradient(180deg, #ffe5d9 11.2%, #f4acb7 100.3%);
+        width: 50%;
+        margin: 20px auto;
+        padding: 0px 50px;
+        display: block;
+      }
+      h1 {
+        text-align: center;
+        color: #9d8189;
+        border: 2px solid #f4acb7;
+        border-radius: 5px;
+        display: block;
+        padding: 30px;
+        margin: 30px auto;
+      }
+      img {
+        max-width: 85%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;
+      }
+      .description {
+        text-align: justify;
+        color: #2b2d42;
+        font-size: 20px;
+        padding: 10px 0 0 0;
+        line-height: 30px;
+      }
+      h2 {
+        color: #2b2d42;
+        text-align: center;
+        padding: 25px 15px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        align-content: center;
+        padding: 20px 20px;
+        border-radius: 20px;
+        border: 1px solid #9d8189;
+        background-color: #ffe5d9;
+        color: #2b2d42;
+        font-size: 20px;
+        font-weight: 700;
+        transition: all 200ms ease-in-out;
+        box-shadow: #9d8189 0px 8px 8px 0;
+      }
+      button:hover {
+        background-color: #9d8189;
+        color: #ffe5d9;
+        cursor: pointer;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+        transition: all 200ms ease-in-out;
+      }
+      .footer {
+        display: block;
+        margin: 50px auto 10px;
+        text-align: center;
+        color: #9d8189;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Read and relax book club</h1>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/541/original/WAB-March-Designs-2.png?1654585072"
+        alt="Reading books in book club"
+      />
+      <p class="description">
+        Have you ever wondered that
+        <strong
+          >reading can be a wonderful (and healthy) escape from the stress of
+          everyday life</strong
+        >? Simply by opening a book, you allow yourself to be invited into a
+        literary world that distracts you from your daily stressors. Reading can
+        even relax your body by lowering your heart rate and easing the tension
+        in your muscles. A 2009 study at the University of Sussex found that
+        reading can reduce stress by up to 68%. It works better and faster than
+        other relaxation methods, such as listening to music or drinking a hot
+        cup of tea. This is because your mind is invited into a literary world
+        that is free from the stressors that plague your daily life.
+      </p>
+      <a
+        href="https://www.takingcharge.csh.umn.edu/reading-stress-relief"
+        target="_blank"
+        >Find out more on the University of Minnesota website
+      </a>
+      <h2>
+        Sharing impressions of reading with different people is an even better
+        way to overcome stress
+      </h2>
+      <button>Join Read and relax book club</button>
+      <p class="footer">This page was built by Yuliia Shafarenko</p>
+    </div>
+
+    <script>
+      function joinClub() {
+        let name = prompt("What is your name?");
+        let yourAddress = prompt("What is your email address?");
+        let books = prompt("Do you like reading books?");
+        books = books.toLocaleLowerCase();
+        books = books.trim();
+
+        if ((books = "yes")) {
+          alert(
+            "🙋‍♀️ Welcome to Read and relax book club, " +
+              name +
+              "! We've sent an invitation link to " +
+              yourAddress
+          );
+        } else {
+          alert(
+            "🙋‍♀️ Hey, " +
+              name +
+              "! Start reading with us and you'll enjoy it. We've sent an invitation link to " +
+              yourAddress
+          );
+        }
+      }
+      let joinButton = document.querySelector("button");
+      joinButton.addEventListener("click", joinClub);
+    </script>
+  </body>
+</html>
